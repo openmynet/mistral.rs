@@ -135,6 +135,13 @@ After creating the UQFF file, you can upload the model to Hugging Face. To do th
 ./mistralrs-server --isq Q4K -i plain -m microsoft/Phi-3.5-mini-instruct --write-uqff phi3.5-mini-instruct-q4k.uqff
 ```
 
+### Run with the CLI
+
+```
+# git clone https://huggingface.co/EricB/Phi-3.5-mini-instruct-UQFF
+./mistralrs-server -i plain -a phi3 -m /path/to/Phi-3.5-mini-instruct-UQFF --from-uqff /path/to/Phi-3.5-mini-instruct-UQFF/phi3.5-mini-instruct-q4k.uqff
+```
+
 ### Creating with the Rust API
 
 Modify the Normal or Vision config as follows:
